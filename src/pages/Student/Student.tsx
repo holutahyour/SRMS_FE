@@ -44,7 +44,6 @@ function Student() {
                 >
                     <Form className="flex items-center justify-between gap-2"
                     >
-
                         <div className="flex gap-5">
                             <TextInput label='' id='search' name='search' placeholder="search" type="TextIconInput" icon={<BiSearch />} />
                             <Button
@@ -61,9 +60,6 @@ function Student() {
                                 <CheckboxGroup name="Status" data={["all", "Completed", "Uncompleted"]} />
                             </Dropdown> */}
                         </div>
-
-
-
                     </Form>
                 </Formik>
                 <List>

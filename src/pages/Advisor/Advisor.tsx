@@ -32,7 +32,6 @@ function Advisor() {
         setIsOpen(state);
     }
 
-
     return (
         <div className="">
             <div className="space-y-4">
@@ -96,8 +95,6 @@ function Advisor() {
                                 >
                                     <p className="text-sm font-medium">View</p>
                                 </Button>
-
-
                             </ListRow>
                         )
                     })}

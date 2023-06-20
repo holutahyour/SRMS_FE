@@ -21,7 +21,6 @@ function AdvisorDashboard() {
     load_students()
   }, [get_student_stat, load_levels, load_students])
 
-
   const [isOpen, setIsOpen] = useState(false)
 
   const handleOpenModal = (state: boolean, id?: string) => {
@@ -68,11 +67,8 @@ function AdvisorDashboard() {
             </div>
             <Link to='/students'><Button>View All</Button></Link>
           </div>
-        </div>
-        
+        </div>        
       </div>
-
-
       <Modal page={<AdvisorEdit handleModal={handleCloseModal} title={"Profile"} isDetail={true} />} isOpen={isOpen} />
     </div>
   )

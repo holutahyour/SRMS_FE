@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { useStore } from "../../data/stores/store"
 import { observer } from "mobx-react-lite"
 import { useParams } from "react-router-dom";
-import Card from "../Card";
+import Card from "../../components/Card";
 import CheckboxGroup from "../../components/CheckboxGroup/CheckboxGroup";
 import { StudentProfile } from "./StudentDashboard/StudentProfile";
 

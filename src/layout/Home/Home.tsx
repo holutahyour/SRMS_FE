@@ -57,8 +57,6 @@ function Home({ children }: { children: JSX.Element[] | JSX.Element }) {
 
     ]
 
-
-
     return (
         <>
             <Drawer sideMenu={
@@ -142,9 +140,6 @@ function Home({ children }: { children: JSX.Element[] | JSX.Element }) {
                                 return isValid() ? menu : null
                             })}
                         </div>
-
-
-
                     </SideNav>
                     <main className='p-6 overflow-y-auto bg-gray-100 '>
                         {children}

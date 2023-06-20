@@ -1,4 +1,4 @@
-import Button from "../../components/Button";
+import Button from "../Button";
 import { MdWarning } from "react-icons/md";
 import { BiDownArrowCircle } from "react-icons/bi";
 

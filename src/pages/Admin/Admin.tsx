@@ -36,7 +36,6 @@ function Admin() {
         select_user_by_id(id || "")
         setIsOpen(state);
     }
-
     return (
         <div className="">
             <div className="space-y-2">
