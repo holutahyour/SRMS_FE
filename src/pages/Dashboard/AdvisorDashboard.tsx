@@ -6,6 +6,7 @@ import AdvisorEdit from "../Advisor/AdvisorEdit";
 import { HiOutlineUsers } from "react-icons/hi";
 import Button from "../../components/Button";
 import { Link } from "react-router-dom";
+import { observer } from "mobx-react-lite";
 
 function AdvisorDashboard() {
   const {
@@ -39,39 +40,39 @@ function AdvisorDashboard() {
         <div className="rounded-lg overflow-hidden shadow-md bg-white grid items-center">
           <div className="bg-white p-5 flex gap-3 items-center">
             <div className="bg-neutral text-white rounded-lg grid place-items-center h-12 w-12"><HiOutlineUsers size={20} /></div>
-            <div className="grow">
+            <div className="grow flex justify-between items-center">
               <div className="text-sm text-gray-500">Total Students</div>
               <div className="text-lg font-bold text-gray-900 sm:text-3xl">{studentStat?.allStudent}</div>
             </div>
-            <Link to='/students'><Button>View All</Button></Link>
           </div>
+          <Link  to='/students'><Button className="w-full rounded-t-none">View All</Button></Link>
         </div>
 
         <div className="rounded-lg overflow-hidden shadow-md bg-white grid items-center">
           <div className="p-5 flex gap-3 items-center">
             <div className="bg-success text-white rounded-lg grid place-items-center h-12 w-12"><HiOutlineUsers size={20} /></div>
-            <div className="grow">
+            <div className="grow flex justify-between items-center">
               <div className="text-sm text-gray-500">Student with complete document</div>
               <div className="text-lg font-bold text-gray-900 sm:text-3xl">{studentStat?.completed}</div>
             </div>
-            <Link to='/students'><Button>View All</Button></Link>
           </div>
+          <Link  to='/students'><Button className="w-full rounded-t-none">View All</Button></Link>
         </div>
 
         <div className="rounded-lg overflow-hidden shadow-md bg-white grid items-center">
           <div className="bg-white p-5 flex gap-3 items-center">
             <div className="bg-rose-600 text-white rounded-lg grid place-items-center h-12 w-12"><HiOutlineUsers size={20} /></div>
-            <div className="grow">
+            <div className="grow flex justify-between items-center">
               <div className="text-sm text-gray-500">Student with uncomplete <br /> document</div>
               <div className="text-lg font-bold text-gray-900 sm:text-3xl">{studentStat?.uncompleted}</div>
             </div>
-            <Link to='/students'><Button>View All</Button></Link>
           </div>
-        </div>        
+          <Link  to='/students'><Button className="w-full rounded-t-none">View All</Button></Link>
+        </div>
       </div>
       <Modal page={<AdvisorEdit handleModal={handleCloseModal} title={"Profile"} isDetail={true} />} isOpen={isOpen} />
     </div>
   )
 }
 
-export default AdvisorDashboard
+export default observer(AdvisorDashboard)
